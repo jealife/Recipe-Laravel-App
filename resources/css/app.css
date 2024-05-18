@@ -1,3 +1,262 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+input {
+    border: none;
+    padding: .70rem 1.25rem;
+    border-radius: 5rem;
+    width: max-content;
+    color: #272e43;
+    font-size: 1rem;
+}
+
+input::placeholder {
+    color: #a1adc0;
+}
+/* ========================================================================== */
+/* Hero */
+.hero {
+    width: 100%;
+    height: 40vh;
+    height: 50dvh;
+    background-color: #ff5900;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://images.unsplash.com/photo-1539136788836-5699e78bfc75?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    /* background-image: url(https://images.unsplash.com/photo-1466637574441-749b8f19452f?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    overflow: clip;
+}
+
+.hero .hero_overlay {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+    gap: .50rem;
+    padding: 3rem 3rem 5rem 3rem;
+    background: rgb(255, 89, 0);
+    background: linear-gradient(0deg, rgba(255, 89, 0, 1) 0%, rgba(252, 254, 255, 0.25555758017492713) 75%);
+}
+
+.hero .hero_title {
+    color: #ffffff;
+    font-size: 4rem;
+}
+
+.hero_overlay>p {
+    color: #F4F4F4;
+    font-size: 1.5rem;
+}
+
+/* ========================================================================== */
+
+/* ========================================================================== */
+/* Login Section */
+.section_login {
+    width: 100%;
+    padding: 0rem 2rem 5rem 2rem;
+}
+
+.section_login>.form_login_container {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form_login_container>form {
+    width: max-content;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    background-color: #F4F4F4;
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: max-content;
+    margin: -2.5rem auto;
+}
+
+.form_login_container>form>.input {
+    display: flex;
+    align-items: start;
+    gap: 3rem;
+
+}
+
+:is(form) .email,
+.password {
+    display: flex;
+    flex-direction: column;
+    gap: .50rem;
+}
+
+.form_login_container>form {
+    gap: 1.5rem;
+}
+
+.email>span {
+    font-size: .79rem;
+    color: #8692a5;
+
+}
+
+:is(form) div>label {
+    color: #555e6b;
+}
+
+input[type=email],
+input[type=password] {
+    outline: 1px solid transparent;
+    outline-offset: 2px;
+}
+
+
+
+input[type=email]:focus,
+input[type=password]:focus {
+    transition: .2s ease-in-out;
+    outline: 2px solid #ff5900;
+    outline-offset: 2px;
+}
+
+input[type=submit] {
+    height: fit-content;
+    width: 100%;
+    background-color: #ff5900;
+    color: #F4F4F4;
+    outline-offset: 2px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+input[type=submit]:hover {
+    background-color: #ff9054;
+    outline: 2px solid #ff59003a;
+    box-shadow: #ff590051 0px 6px 24px 0px, #ff905467 0px 0px 0px 1px;
+}
+
+/* ========================================================================== */
+
+/* ========================================================================== */
+/* Recipes section */
+
+.recipes {
+    width: 100%;
+    padding: 2rem 2rem;
+
+}
+
+.recipes>.recipes_container {
+    padding: 1rem 0 4rem;
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+}
+
+
+.recipes_container>.recipe {
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    border-radius: 1rem;
+    padding: 1rem 1rem 2rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+:is(article) a {
+    font-size: 1.25rem;
+    color: #ff5900;
+}
+
+:is(article) p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1.15rem;
+    color: #2d3449;
+}
+
+:is(article) span {
+    font-size: .90rem;
+    color: #6e7886;
+}
+
+/* ========================================================================== */
+
+main .not_Found{
+    height: 100vh;
+    height: 100dvh;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+}
+.not_Found>img{
+    width: 50%;
+}
+
+.not_Found>a{
+    background-color: #ff5900;
+    color: #F4F4F4;
+    outline-offset: 2px;
+    border-radius: 5rem;
+    padding: 1rem;
+}
+
+/* ========================================================================== */
+/* Responsive */
+/* ========================================================================== */
+
+@media (width<989px) {
+    .hero .hero_title {
+        color: #ffffff;
+        font-size: 2.5rem;
+    }
+
+    .hero_overlay>p {
+        color: #F4F4F4;
+        font-size: 1rem;
+    }
+
+    .recipes>.recipes_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (width<776px) {
+    .not_Found>img{
+        width: 85%;
+    }
+    .hero {
+        border-bottom-left-radius: 3rem;
+        border-bottom-right-radius: 3rem;
+    }
+
+    nav>.menu>.links {
+        gap: 1rem;
+    }
+
+    .recipes>.recipes_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .form_login_container>form>.input {
+        flex-direction: column;
+    }
+
+    .form_login_container>form> {
+        width: 100%;
+    }
+}
