@@ -22,85 +22,11 @@
 
         <!-- --------------------------------------------------------------- -->
         <!-- Login Section -->
-        <div class="section_login">
-            <div class="form_login_container " data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
-                <form action="">
-                    <div class="input">
-                        <div class="email">
-                            <label for="Email">Email</label>
-                            <input id="email" placeholder="you@exemple.com" type="email" required>
-                            <span class=" ">L'email utilisé lors de la creation de compte</span>
-                        </div>
-                        <div class="password">
-                            <label for="password">Mot de passe</label>
-                            <input type="password" name="password" id="password" placeholder="***********" required>
-                        </div>
-                    </div>
-                    <input type="submit" value="Envoyer">
-                </form>
-            </div>
-        </div>
+       @include('layout.loginForm')
         <!-- --------------------------------------------------------------- -->
 
         <!-- --------------------------------------------------------------- -->
-        <!-- Recipes section -->
-
-        <section class="recipes">
-            <div class="recipes_container">
-
-                <!-- =========================================================== -->
-                <!-- ---------------  signle recipe       ---------------------- -->
-                <article class="recipe">
-                    <h3 class="recipe_title">
-                        <a href="#">Cassoulet</a>
-                    </h3>
-                    <p class="recipe_description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nihil quod atque nam qui.
-                    </p>
-                    <span class="recipe_">
-                        Author (35ans)
-                    </span>
-                </article>
-
-                <article class="recipe">
-                    <h3 class="recipe_title">
-                        <a href="#">Cousous</a>
-                    </h3>
-                    <p class="recipe_description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nihil quod atque nam qui.
-                    </p>
-                    <span class="recipe_">
-                        Author (35ans)
-                    </span>
-                </article>
-
-                <article class="recipe">
-                    <h3 class="recipe_title">
-                        <a href="#">Escargot milanaise</a>
-                    </h3>
-                    <p class="recipe_description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nihil quod atque nam qui.
-                    </p>
-                    <span class="recipe_">
-                        Author (35ans)
-                    </span>
-                </article>
-                <article class="recipe">
-                    <h3 class="recipe_title">
-                        <a href="#">Omeltte à l'avicat</a>
-                    </h3>
-                    <p class="recipe_description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nihil quod atque nam qui.
-                    </p>
-                    <span class="recipe_">
-                        Author (35ans)
-                    </span>
-                </article>
-            </div>
-
-
-        </section>
-        <!-- --------------------------------------------------------------- -->
+        @include('layout.reciepes')
     </main>
     <footer>
         @include('layout.footer')
